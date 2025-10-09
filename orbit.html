@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit</title>
+    <style>
+        .container {
+            margin: auto;
+            display: flex;
+            height: 400px;
+            width: 400px;;
+            background-color: black;
+            padding: 200px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+       
+        .box {
+            background-color: dodgerblue;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 5px solid dodgerblue;
+            position: absolute;
+        }
+        .orbit-wrapper {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            animation: orbit-animation 8s linear infinite;
+        }
+        .box2 {
+            background-color: white;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            height: 20px;
+            width: 20px;
+            transform: translate(-400%, -400%);
+            border-radius: 50%;
+             box-shadow: 
+                0 0 10px 5px rgba(255, 255, 255, 0.7), /* Inner glow */
+                0 0 20px 10px rgba(255, 255, 255, 0.5), /* Outer glow */
+                0 0 30px 15px rgba(255, 255, 255, 0.3);
+        }
+        @keyframes orbit-animation{
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+     
+    }
+   
+            
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="orbit-wrapper">
+            <div class="box2"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
