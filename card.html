@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Profile Card</title>
+    <style>
+        body {
+            font-family:  Arial, sans-serif;
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            width: 500px;
+            margin: auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; 
+            object-fit: cover;  
+            border: 5px solid whitesmoke;
+            flex-shrink: 0;
+        }
+
+        .card-info {
+            padding-left: 20px;
+        }
+
+        .card-info h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0 0 8px 0;
+            color: black;
+        }
+
+        .card-info p {
+            font-size: 1rem; 
+            color: gray;
+            margin: 0 0 20px 0;
+            line-height: 1.5;
+        }
+
+ 
+        .card-buttons a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: aqua;
+            padding: 10px 22px;
+            border-radius: 8px;
+            margin-right: 10px;
+            font-weight: 500;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .card-buttons a.portfolio {
+            background-color: gray;
+        }
+
+        /* Hover effect */
+        .card-buttons a:hover {
+            background-color: lightblue; /* Darker blue */
+        }
+
+        .card-buttons a.portfolio:hover {
+            background-color: lightgray; 
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                flex-direction: column;
+                width: 85vw;
+                text-align: center;
+                padding: 30px 15px;
+            }
+
+            .profile-image {
+                width: 130px;
+                height: 130px;
+                margin-bottom: 20px;
+            }
+
+            .card-info {
+                padding-left: 0;
+            }
+
+            .card-buttons a {
+                display: block;
+                width: 90%;
+                margin: 10px auto;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img class="profile-image" src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Profile Picture">
+        
+        <div class="card-info">
+            <h2>Adit T Krishnadas</h2>
+            <p>A student at scaler school of technology.</p>
+            
+            <div class="card-buttons">
+                <a href="#">Contact</a>
+                <a href="#" class="portfolio">Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
